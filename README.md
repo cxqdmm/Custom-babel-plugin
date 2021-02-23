@@ -21,3 +21,24 @@ const namespace = __cxqnamespace;
 ```
 const namespace = "example/demo";
 ```
+
+### ActionCreatorPlugin
+
+```
+.babelrc
+{
+  "plugins": [
+    "./ActionCreatorPlugin"
+  ]
+}
+
+demo.js
+export const updateLoadingAction = ActionCreator();
+
+```
+
+转换的结果
+
+```
+export const updateLoadingAction = ActionCreator("example/demo/updateLoadingAction");
+```
